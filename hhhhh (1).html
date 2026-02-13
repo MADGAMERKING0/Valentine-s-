@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            animation: fadeIn 2s ease-in;
+        }
+        h1 {
+            font-size: 3em;
+            color: #e91e63;
+            animation: fadeIn 2s ease-in 0.5s both;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in 1s both;
+        }
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #c2185b;
+            transform: scale(1.05);
+        }
+        .hidden {
+            display: none;
+        }
+        .heart {
+            font-size: 4em;
+            color: #e91e63;
+            animation: pulse 2s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="proposal">
+        <div class="heart">❤️</div>
+        <h1>Will You Be My Valentine?</h1>
+        <p>Hey Sangita, you've stolen my heart! Will you make me the happiest person ever by saying yes?</p>
+        <button onclick="sayYes()">Yes! 💕</button>
+    </div>
+    <div id="celebration" class="hidden">
+        <div class="heart">🎉❤️🎉</div>
+        <h1>Yay! You Said Yes!</h1>
+        <p>I'm so excited! Let's make this Valentine's Day unforgettable. I love you! 😘</p>
+        <p>(P.S. No take-backs!)</p>
+    </div>
+
+    <script>
+        function sayYes() {
+            document.getElementById('proposal').classList.add('hidden');
+            document.getElementById('celebration').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
